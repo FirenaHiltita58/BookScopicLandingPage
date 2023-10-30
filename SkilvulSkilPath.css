@@ -1,0 +1,501 @@
+html,
+head,
+body,
+footer {
+  height: auto;
+  width: auto;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+#logo_bookscopic {
+  text-align: center;
+  margin: 3px;
+}
+
+#logo_bookscopic img {
+  width: 250px;
+  height: 80px;
+}
+
+nav {
+  position: -webkit-sticky;
+  /* Safari */
+  position: relative;
+  top: 0;
+  text-align: center;
+  padding: 0px 0px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  background-color: #DFA878;
+  z-index: 100;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #DFA878;
+  font-weight: bold;
+}
+
+li {
+  /* display: inline; */
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+li a {
+  display: block;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+}
+
+li a:hover {
+  background-color: #7C4E29;
+  color: white;
+}
+
+/* untuk elemen li terakhir */
+li:last-child {
+  float: right;
+  border-right: none;
+  /* Menghapus border pada li terakhir */
+}
+
+/* Ini adalah CSS untuk search bar */
+nav input[name="search"],
+button[name="search-button"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px 10px 5px 0;
+}
+
+nav input[name="search"] {
+  flex: 1;
+  /* Ini akan membuat input menyesuaikan lebar yang tersedia */
+  margin-right: 1px;
+  border: none;
+  outline: none;
+  /* Hapus outline saat fokus */
+}
+
+nav button[name="search-button"] {
+  background-color: #BA704F;
+  color: white;
+  border: none;
+  font-size: medium;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav input[name="search"]::placeholder {
+  font-style: italic;
+  /* Membuat teks placeholder italic */
+}
+
+nav button[name="search-button"]:hover {
+  background-color: #6C3428;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    /* Mengubah tata letak menjadi kolom */
+    align-items: center;
+    /* Pusatkan elemen vertikal */
+  }
+
+  nav li {
+    float: none;
+    /* Hapus float */
+    text-align: center;
+    /* Pusatkan teks */
+    border-right: none;
+    /* Hapus border kanan */
+    margin: 5px 0;
+    /* Tambahkan margin atas dan bawah */
+  }
+
+  .search-container {
+    display: block;
+    /* Buat elemen ini menjadi block */
+    text-align: center;
+    /* Pusatkan teks */
+  }
+
+  li:last-child {
+    float: none;
+    border-right: none;
+    /* Menghapus border pada li terakhir */
+  }
+}
+
+#home {
+  margin-top: 20px;
+  /* Tambahkan jarak di atas slide show */
+  margin-bottom: 20px;
+  /* Tambahkan jarak di bawah slide show */
+}
+
+/* Kontainer slide show */
+.slide-show {
+  position: relative;
+  max-width: 70%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/* Elemen slide */
+.slide {
+  /* display: none; */
+  width: 100%;
+}
+
+/* Style untuk gambar dalam slide */
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Tombol "prev" dan "next" */
+.prev,
+.next {
+  position: absolute;
+  /* Menggunakan absolute positioning */
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 5px;
+  background-color: #DFA878;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  transition: background-color 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #7C4E29;
+}
+
+/* Letakkan tombol prev di sisi kiri */
+.prev {
+  left: 0;
+}
+
+/* Letakkan tombol next di sisi kanan */
+.next {
+  right: 0;
+}
+
+
+body p {
+  margin:40px;
+  font-size: medium;
+  text-align: center;
+  font-weight: bold;
+}
+
+#about,
+#deals {
+  margin: 0 auto;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.row_p {
+  display: flex;
+  align-items: center;
+  /* Mengatur konten di tengah secara vertikal */
+}
+
+.col_p {
+  flex: 50%;
+  padding: 5px;
+}
+
+.video-container {
+  text-align: center;
+  /* Mengatur video di tengah horizontal */
+}
+
+.image-container {
+  text-align: center;
+  /* Mengatur video di tengah horizontal */
+}
+
+.paragraph-container {
+  text-align: justify;
+}
+
+.col_p video {
+  max-width: 50%;
+}
+
+.col_p img {
+  max-width: 50%;
+}
+
+.swiper {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px; 
+}
+
+.swiper-slide {
+  margin-left: 20px;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 80%;
+  object-fit: cover;
+}
+
+/* Gaya tombol navigasi Swiper */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  /* Menggunakan absolute positioning */
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 5px;
+  background-color: #DFA878;
+  color: #fff !important;
+  font-size: 15px!important;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 50px !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #7C4E29;
+}
+
+#books h2 {
+  text-align: center;
+}
+
+.col {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  /* Mengatur form ke tengah secara horizontal */
+  align-items: center;
+  /* Mengatur form ke tengah secara vertikal */
+}
+
+.center-form {
+  width: 100%;
+  max-width: fit-content;
+  margin-bottom: 10px;
+}
+
+form {
+  max-width: fit-content;
+  background-color: #E2C799;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+label {
+  display: block;
+  padding-top: 5px;
+  font-weight: bold;
+}
+
+#check {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-left: 20%;
+}
+
+#status {
+  margin-bottom: 5px;
+  margin-right: 10%;
+}
+
+#check,
+#status {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 5px;
+  align-items: center;
+}
+
+input::placeholder {
+  font-style: italic;
+}
+
+#name,
+#city,
+#zip-code,
+#email {
+  border: 1px solid gray;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-sizing: border-box;
+  /* Menghitung padding dan border dalam lebar elemen */
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none
+}
+
+#submit-form {
+  display: block;
+  padding-top: 5px;
+  background-color: #BA704F;
+  color: #fff;
+  font-size: medium;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: auto;
+}
+
+#submit-form:hover {
+  background-color: #6C3428;
+  color: white;
+}
+
+#warning {
+  height: 30px;
+  padding: 5px 0;
+}
+
+#form h2 {
+  text-align: center;
+}
+
+#faqs h2 {
+  text-align: center;
+}
+
+#faqs {
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10vh;
+}
+
+#faqs-container {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion_faqs {
+  text-align: left;
+  background-color: #E2C799;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  width: 60%;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.active,
+.accordion_faqs:hover {
+  background-color: #E2C799;
+}
+
+.accordion_faqs:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  width: 60%;
+  box-sizing: border-box;
+  /* Menghitung padding dan border dalam lebar elemen */
+  margin: 0 auto;
+  text-align: justify !important;
+  color: black;
+  padding: 15px;
+  background-color: beige;
+  display: none;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+footer {
+  position: relative;
+  justify-content: space-between;
+  /* Menyebarkan elemen secara merata */
+  width: 100%;
+  background-color: #DFA878;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#footer-container {
+  align-items: center;
+  /* Menengahkan elemen secara vertikal */
+  justify-content: space-between;
+  /* Menyebarkan elemen secara merata */
+  position: relative;
+  display: flex;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#icons img {
+  width: 30px;
+  margin: 3px;
+}
+
+span {
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+}
+
+#footer-container a {
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+}
